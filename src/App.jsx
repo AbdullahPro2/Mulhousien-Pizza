@@ -5,6 +5,7 @@ import Home from './ui/Home';
 import Shop from './ui/Shop';
 import Registration from './features/user/Registration';
 import Cart from './features/cart/Cart';
+import Orders from './features/order/Orders';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/mulhousienPizza/registration',
         element: <Registration />,
+      },
+      {
+        path: '/mulhousienPizza/orders',
+        element: <Orders />,
       },
     ],
   },
