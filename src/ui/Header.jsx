@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="relative z-40 flex h-16 items-center justify-between bg-orange-300 px-2 py-1 text-sm md:text-base xl:text-lg">
+    <header className="relative z-40 flex h-16 items-center justify-between bg-orange-300 px-2 py-1 text-sm  md:text-base xl:text-lg">
       <img src={Logo} alt="Logo" className="w-52 md:w-60 lg:w-72" />
 
       <div className="w-16">
@@ -27,7 +27,7 @@ function Header() {
           />
         )}
         <ul
-          className={`absolute right-0 top-[-800px] flex h-screen w-[0px] flex-col items-center justify-center gap-16 overflow-hidden bg-orange-300  transition-all duration-300 xl:top-[40%] xl:h-auto xl:w-auto xl:flex-row xl:items-start xl:justify-end  xl:gap-8 xl:bg-transparent xl:px-2 xl:text-lg  ${
+          className={`absolute right-0 top-[-800px] flex h-screen w-[0px] flex-col items-center justify-center gap-16 overflow-hidden bg-orange-300  transition-all duration-300 xl:top-[28%] xl:h-auto xl:w-auto xl:flex-row xl:items-start xl:justify-end  xl:gap-8 xl:bg-transparent xl:px-2 xl:text-lg  ${
             isOpen ? ' top-[0px] w-[50%]  ' : ''
           } `}
         >
