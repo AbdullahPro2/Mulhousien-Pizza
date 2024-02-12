@@ -41,11 +41,9 @@ function Carousel() {
         setCurrentIndex(0);
       }
     }, 4000);
-    console.log(translate);
-    console.log(currentIndex);
 
     return () => clearInterval(interval);
-  }, [currentIndex, carouselData]);
+  }, [currentIndex, carouselData, translate]);
   return (
     <div className="overflow-x-hidden">
       <div

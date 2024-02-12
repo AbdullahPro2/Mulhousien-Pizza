@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '../assets/logo-no-background.svg';
 import menuIcon from '../assets/MenuIcon.png';
 import cross from '../assets/CrossIcon.png';
 import { Link } from 'react-router-dom';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      const currentScrollPosition = window.scrollY;
+      const shouldShowNavbar =
+        currentScrollPosition < prevScrollPos || currentScrollPosition < 100;
+      if (!shouldShowNavbar && isOpen) {
+        setIsOpen(false);
+      }
+      setPrevScrollPos(currentScrollPosition);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isOpen, prevScrollPos]);
+
   return (
     <header className="relative z-40 flex h-16 items-center justify-between bg-orange-300 px-2 py-1 text-sm  md:text-base xl:text-lg">
       <img src={Logo} alt="Logo" className="w-52 md:w-60 lg:w-72" />
