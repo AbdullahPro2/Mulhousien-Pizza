@@ -23,7 +23,9 @@ function Header() {
 
   return (
     <header className="relative z-40 flex h-16 items-center justify-between bg-orange-300 px-2 py-1 text-sm  md:text-base xl:text-lg">
-      <img src={Logo} alt="Logo" className="w-52 md:w-60 lg:w-72" />
+      <Link to="/mulhousienPizza/">
+        <img src={Logo} alt="Logo" className="w-52 md:w-60 lg:w-72" />
+      </Link>
 
       <div className="w-16">
         {isOpen && (
