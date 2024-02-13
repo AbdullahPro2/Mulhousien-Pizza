@@ -13,7 +13,7 @@ function Services() {
       >
         Taste Our Services
       </h1>
-      <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-1 ">
+      <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-0 ">
         <ServiceItem
           image={freeDelivery}
           para="Enjoy the convenience of free delivery with Mulhousien Pizzas. Your favorite pizzas delivered to your doorstep without any additional cost."
@@ -22,12 +22,12 @@ function Services() {
         <ServiceItem
           image={fastDelivery}
           para="Our commitment to delivering delicious pizzas swiftly ensures you get a delightful dining experience without any wait."
-          heading="Good and Quick Service"
+          heading="Quick Service"
         />
         <ServiceItem
           image={securePayment}
           para="Our reliable and secure payment system ensures that your online orders are processed with the utmost safety."
-          heading="Secure Online Transaction"
+          heading="Secure Transaction"
         />
       </div>
     </div>

@@ -12,7 +12,7 @@ function CarouselItem({ item }) {
       </div>
       <img
         src={item.image}
-        className="w-36 rounded sm:w-52 md:w-64 lg:mr-32"
+        className="w-36 rounded sm:w-52 md:w-64 lg:mr-32 lg:w-72"
         alt="pizza of carousel"
       />
     </div>
