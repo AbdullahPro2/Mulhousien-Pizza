@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function CarouselItem({ item }) {
   const navigate = useNavigate();
-  // 'flex min-w-full justify-between gap-4 bg-orange-200 px-4 py-8 sm:h-[60vh] sm:px-12 md:justify-center';
+
   return (
     <div className=" grid min-w-full grid-cols-2 gap-2 bg-orange-200 px-4 py-8 sm:h-[60vh] sm:px-12">
       <div className="flex  flex-col justify-center  md:items-end ">
@@ -14,13 +14,13 @@ function CarouselItem({ item }) {
         <div className="flex flex-col gap-2 md:w-[80%] md:flex-row">
           <button
             className=" mt-auto w-36 rounded  bg-orange-100 px-2 py-2 text-sm text-black hover:bg-orange-300  sm:w-1/2 sm:text-xl md:mt-4"
-            onClick={() => navigate('/mulhousienPizza/pizzas')}
+            onClick={() => navigate('/mulhousienPizza/menu')}
           >
             Menu
           </button>
           <button
             className=" mt-auto w-36 rounded  bg-orange-500 px-2 py-2 text-sm text-white hover:bg-orange-300 sm:w-1/2 sm:text-xl md:mt-4"
-            onClick={() => navigate('/mulhousienPizza/pizzas')}
+            onClick={() => navigate('/mulhousienPizza/orders')}
           >
             Order Now
           </button>

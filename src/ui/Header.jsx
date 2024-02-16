@@ -59,7 +59,7 @@ function Header() {
               Home
             </li>
           </Link>
-          <Link to="/mulhousienPizza/pizzas">
+          <Link to="/mulhousienPizza/menu">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center xl:inline   ${

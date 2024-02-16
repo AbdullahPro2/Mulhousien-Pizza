@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/mulhousienPizza/pizzas',
+        path: '/mulhousienPizza/menu',
         element: <Shop />,
       },
       {

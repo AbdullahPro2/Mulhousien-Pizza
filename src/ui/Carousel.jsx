@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import pizza_1 from '../assets/pizza_1.png';
 import pizza_2 from '../assets/pizza_2.png';
 import pizza_3 from '../assets/pizza_3.png';
@@ -29,15 +29,15 @@ const carouselData = [
 function Carousel() {
   const [translate, setTranslate] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselDiv = useRef();
 
   useEffect(() => {
+    carouselDiv.current.style.transform = `translateX(-${currentIndex * 100}%)`;
     const interval = setInterval(() => {
       if (translate < 200 && currentIndex < 2) {
         const nextIndex = currentIndex + 1;
         setCurrentIndex(nextIndex);
-        setTranslate(100 * nextIndex);
       } else {
-        setTranslate(0);
         setCurrentIndex(0);
       }
     }, 4000);
@@ -46,9 +46,7 @@ function Carousel() {
   }, [currentIndex, carouselData, translate]);
   return (
     <div className="overflow-x-hidden">
-      <div
-        className={`flex translate-x-[-${translate}%] transition-all duration-500`}
-      >
+      <div className={`flex  transition-all duration-500`} ref={carouselDiv}>
         {carouselData.map((item) => (
           <CarouselItem item={item} key={item.id} />
         ))}
