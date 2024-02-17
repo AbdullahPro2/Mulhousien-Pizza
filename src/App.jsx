@@ -2,7 +2,7 @@ import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/Applayout';
 import Home from './ui/Home';
-import Shop from './ui/Shop';
+import Shop, { loader as menuLoader } from './ui/Shop';
 import Registration from './features/user/Registration';
 import Cart from './features/cart/Cart';
 import Orders from './features/order/Orders';
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
       {
         path: '/mulhousienPizza/menu',
         element: <Shop />,
+        loader: menuLoader,
       },
       {
         path: '/mulhousienPizza/cart',
