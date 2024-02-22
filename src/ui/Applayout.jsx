@@ -10,7 +10,7 @@ function Applayout() {
   const isLoading = navigation.state === 'loading';
   return (
     <div className="relative">
-      {<Loader />}
+      {isLoading && <Loader />}
       <div className="min-h-screen">
         <Header />
         <Outlet />

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Loader() {
   return (
-    <div className="absolute top-[50%] z-50 h-10 w-10 translate-x-[50%] rounded-full border-4 border-black"></div>
+    <div className="fixed left-[50%]  top-[50%] z-50 h-20 w-20 translate-x-[-50%]  translate-y-[-50%]  animate-[rot_0.5s_linear_infinite]  rounded-full border-8 border-gray-400 border-t-black"></div>
   );
 }
 

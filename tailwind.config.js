@@ -13,6 +13,15 @@ export default {
       screens: {
         xs: '380px',
       },
+      keyframes: {
+        rot: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        animation: {
+          rotation: 'rot 0.5s linear infinite',
+        },
+      },
     },
   },
   plugins: [],
