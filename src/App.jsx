@@ -5,11 +5,14 @@ import Home from './ui/Home';
 import Shop, { loader as menuLoader } from './ui/Shop';
 import Registration from './features/user/Registration';
 import Cart from './features/cart/Cart';
-import Orders from './features/order/Orders';
+import Orders, { loader as orderLoader } from './features/order/Orders';
+import Error from './ui/Error';
+import Createorder from './features/order/Createorder';
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: '/mulhousienPizza/',
@@ -19,18 +22,25 @@ const router = createBrowserRouter([
         path: '/mulhousienPizza/menu',
         element: <Shop />,
         loader: menuLoader,
-      },
-      {
-        path: '/mulhousienPizza/cart',
-        element: <Cart />,
+        errorElement: <Error />,
       },
       {
         path: '/mulhousienPizza/registration',
         element: <Registration />,
       },
       {
-        path: '/mulhousienPizza/orders',
+        path: '/mulhousienPizza/cart',
+        element: <Cart />,
+      },
+      {
+        path: '/mulhousienPizza/order/new',
+        element: <Createorder />,
+      },
+      {
+        path: '/mulhousienPizza/orders/:orderId',
         element: <Orders />,
+        loader: orderLoader,
+        errorElement: <Error />,
       },
     ],
   },
