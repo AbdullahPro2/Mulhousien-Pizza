@@ -79,7 +79,7 @@ function Header() {
               Cart
             </li>
           </Link>
-          <Link to="/mulhousienPizza/orders">
+          <Link to="/mulhousienPizza/order/new">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center xl:inline   ${

@@ -20,7 +20,7 @@ function CarouselItem({ item }) {
           </button>
           <button
             className=" mt-auto w-36 rounded  bg-orange-500 px-2 py-2 text-sm text-white hover:bg-orange-300 sm:w-1/2 sm:text-xl md:mt-4"
-            onClick={() => navigate('/mulhousienPizza/orders')}
+            onClick={() => navigate('/mulhousienPizza/order/new')}
           >
             Order Now
           </button>

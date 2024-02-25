@@ -7,7 +7,9 @@ import Registration from './features/user/Registration';
 import Cart from './features/cart/Cart';
 import Orders, { loader as orderLoader } from './features/order/Orders';
 import Error from './ui/Error';
-import Createorder from './features/order/Createorder';
+import Createorder, {
+  action as createOrderAction,
+} from './features/order/Createorder';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
       {
         path: '/mulhousienPizza/order/new',
         element: <Createorder />,
+        action: createOrderAction,
       },
       {
         path: '/mulhousienPizza/orders/:orderId',
