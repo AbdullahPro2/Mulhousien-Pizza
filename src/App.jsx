@@ -3,7 +3,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/Applayout';
 import Home from './ui/Home';
 import Shop, { loader as menuLoader } from './ui/Shop';
-import Registration from './features/user/Registration';
 import Cart from './features/cart/Cart';
 import Orders, { loader as orderLoader } from './features/order/Orders';
 import Error from './ui/Error';
@@ -26,10 +25,7 @@ const router = createBrowserRouter([
         loader: menuLoader,
         errorElement: <Error />,
       },
-      {
-        path: '/mulhousienPizza/registration',
-        element: <Registration />,
-      },
+
       {
         path: '/mulhousienPizza/cart',
         element: <Cart />,
