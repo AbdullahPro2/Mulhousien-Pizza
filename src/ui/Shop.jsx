@@ -5,7 +5,6 @@ import Item from './Item';
 
 function Shop() {
   const menu = useLoaderData();
-  console.log(menu);
   return (
     <div className="">
       <h1 className=" mt-4 text-center  text-xl font-bold lg:text-3xl">Menu</h1>
