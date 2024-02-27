@@ -6,14 +6,16 @@ function Orders() {
   const [query, setQuery] = useState();
   const order = useLoaderData();
   const navigate = useNavigate();
-  console.log(query);
   console.log(order);
+  const date = new Date(order.estimatedDelivery);
+
+  const formattedDate = date.toLocaleString();
   return (
     <div>
       <h1 className=" mt-4 text-center  text-xl font-bold lg:text-3xl">
         Order
       </h1>
-      <div className="relative mx-auto mt-10 w-[80%] md:w-1/2 ">
+      <div className="relative mx-auto mb-7 mt-10 w-[80%] md:w-1/2">
         <input
           placeholder="Search your order"
           value={query}
@@ -23,9 +25,32 @@ function Orders() {
         <img
           src={search}
           alt="search bar icon"
-          className="absolute right-3 top-[7px] "
+          className="absolute right-3 top-[7px] cursor-pointer"
           onClick={() => navigate(`/mulhousienPizza/orders/${query}`)}
         />
+      </div>
+      <div className="m-2 mx-auto rounded-lg  border-4 border-orange-400 p-2 md:w-[80%] lg:w-[60%] lg:space-y-4 xl:w-[50%]">
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Name: {order.customer}
+        </p>
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Order id: {order.id} ✨
+        </p>
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Status: {order.status} 🍕{' '}
+        </p>
+        <p className="text-lg md:text-xl xl:text-2xl ">
+          Priority: {order.priority ? 'Yes' : 'No'} ✔
+        </p>
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Items: {order.cart.length}
+        </p>
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Price: {order.orderPrice} 💸
+        </p>
+        <p className="text-lg md:text-xl  xl:text-2xl ">
+          Expected Delivery At: {formattedDate.split(',')[1]} 🚕
+        </p>
       </div>
     </div>
   );

@@ -12,14 +12,14 @@ function CartItem({ item }) {
       >
         <span
           onClick={() => dispatch(increaseQuantity(item))}
-          className="flex h-10 w-10 items-center justify-center rounded-full border-2 hover:bg-orange-200"
+          className="flex h-10 w-10 items-center justify-center rounded-full border-2 hover:cursor-pointer hover:bg-orange-200 lg:text-lg "
         >
           +
         </span>
-        <span>{item.quantity}</span>
+        <span className="lg:text-lg">{item.quantity}</span>
         <span
           onClick={() => dispatch(decreaseQuantity(item))}
-          className="flex h-10 w-10 items-center justify-center rounded-full border-2 hover:bg-orange-200"
+          className="flex h-10 w-10 items-center justify-center rounded-full border-2 hover:cursor-pointer hover:bg-orange-200 lg:text-lg"
         >
           -
         </span>
@@ -30,8 +30,8 @@ function CartItem({ item }) {
         className="mx-auto my-auto w-40 rounded-md"
       />
       <div className="flex min-w-[120px] flex-col justify-between  px-2 py-6">
-        <p>{item.name}</p>
-        <p>total: {item.unitPrice * item.quantity}</p>
+        <p className="lg:text-lg">{item.name}</p>
+        <p className="lg:text-lg">total: {item.unitPrice * item.quantity}</p>
       </div>
     </div>
   );

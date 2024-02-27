@@ -29,7 +29,7 @@ function CarouselItem({ item }) {
       <div className="flex items-center justify-center md:justify-start  ">
         <img
           src={item.image}
-          className=" h-40 w-40 sm:h-52 sm:w-52 md:h-64 md:w-64  lg:h-72 lg:w-72"
+          className=" h-40 w-40  sm:h-52 sm:w-52 md:h-64  md:w-64 lg:h-72 lg:w-72"
           alt="pizza of carousel"
         />
       </div>
