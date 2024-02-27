@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <header className="relative z-40 flex h-16 items-center justify-between bg-orange-300 px-2 py-1 text-sm  md:text-base xl:text-lg">
-      <Link to="/mulhousienPizza/">
+      <Link to="/Mulhousien-Pizza/">
         <img src={Logo} alt="Logo" className="w-52 md:w-60 lg:w-72" />
       </Link>
 
@@ -49,7 +49,7 @@ function Header() {
             isOpen ? ' top-[0px] w-[50%]  ' : ''
           } `}
         >
-          <Link to="/mulhousienPizza/">
+          <Link to="/Mulhousien-Pizza/">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center  xl:inline   ${
@@ -59,7 +59,7 @@ function Header() {
               Home
             </li>
           </Link>
-          <Link to="/mulhousienPizza/menu">
+          <Link to="/Mulhousien-Pizza/menu">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center xl:inline   ${
@@ -69,7 +69,7 @@ function Header() {
               Shop
             </li>
           </Link>
-          <Link to="/mulhousienPizza/cart">
+          <Link to="/Mulhousien-Pizza/cart">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center xl:inline   ${
@@ -79,7 +79,7 @@ function Header() {
               Cart
             </li>
           </Link>
-          <Link to="/mulhousienPizza/order/new">
+          <Link to="/Mulhousien-Pizza/order/new">
             <li
               onClick={() => setIsOpen(false)}
               className={` cursor-pointer justify-center xl:inline   ${

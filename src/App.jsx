@@ -16,27 +16,27 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: '/mulhousienPizza/',
+        path: '/Mulhousien-Pizza/',
         element: <Home />,
       },
       {
-        path: '/mulhousienPizza/menu',
+        path: '/Mulhousien-Pizza/menu',
         element: <Shop />,
         loader: menuLoader,
         errorElement: <Error />,
       },
 
       {
-        path: '/mulhousienPizza/cart',
+        path: '/Mulhousien-Pizza/cart',
         element: <Cart />,
       },
       {
-        path: '/mulhousienPizza/order/new',
+        path: '/Mulhousien-Pizza/order/new',
         element: <Createorder />,
         action: createOrderAction,
       },
       {
-        path: '/mulhousienPizza/orders/:orderId',
+        path: '/Mulhousien-Pizza/orders/:orderId',
         element: <Orders />,
         loader: orderLoader,
         errorElement: <Error />,

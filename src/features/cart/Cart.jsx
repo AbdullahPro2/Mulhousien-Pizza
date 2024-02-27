@@ -22,7 +22,7 @@ function Cart() {
           </div>
           <button
             className="mx-auto my-5 flex self-baseline rounded-md bg-orange-400 p-2 text-white hover:bg-orange-300 hover:text-black"
-            onClick={() => navigate('/mulhousienPizza/order/new')}
+            onClick={() => navigate('/Mulhousien-Pizza/order/new')}
           >
             Place Order
           </button>
@@ -32,7 +32,7 @@ function Cart() {
           <p className="mt-20 text-center text-2xl">Cart Empty !</p>
           <button
             className="mx-auto my-5 flex self-baseline rounded-md bg-orange-400 p-2 text-white hover:bg-orange-300 hover:text-black"
-            onClick={() => navigate('/mulhousienPizza/menu')}
+            onClick={() => navigate('/Mulhousien-Pizza/menu')}
           >
             Shop your meal now 👉
           </button>

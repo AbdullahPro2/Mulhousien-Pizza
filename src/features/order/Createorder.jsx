@@ -65,7 +65,7 @@ function Createorder() {
           <p className="mt-20 text-center text-2xl">Your cart is empty!</p>
           <button
             className="mx-auto my-5 flex self-baseline rounded-md bg-orange-400 p-2 text-white hover:bg-orange-300 hover:text-black"
-            onClick={() => navigate('/mulhousienPizza/menu')}
+            onClick={() => navigate('/Mulhousien-Pizza/menu')}
           >
             Shop your meal now 👉
           </button>

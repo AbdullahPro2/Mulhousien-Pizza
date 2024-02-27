@@ -14,13 +14,13 @@ function CarouselItem({ item }) {
         <div className="flex flex-col gap-2 md:w-[80%] md:flex-row">
           <button
             className=" mt-auto w-36 rounded  bg-orange-100 px-2 py-2 text-sm text-black hover:bg-orange-300  sm:w-1/2 sm:text-xl md:mt-4"
-            onClick={() => navigate('/mulhousienPizza/menu')}
+            onClick={() => navigate('/Mulhousien-Pizza/menu')}
           >
             Menu
           </button>
           <button
             className=" mt-auto w-36 rounded  bg-orange-500 px-2 py-2 text-sm text-white hover:bg-orange-300 sm:w-1/2 sm:text-xl md:mt-4"
-            onClick={() => navigate('/mulhousienPizza/order/new')}
+            onClick={() => navigate('/Mulhousien-Pizza/order/new')}
           >
             Order Now
           </button>
