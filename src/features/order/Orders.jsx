@@ -56,7 +56,7 @@ function Orders() {
   );
 }
 export async function loader({ params }) {
-  // react router sent some data into the loader function as it calls it and one the property of object that loader recieves is "params"
+  // react router sent some data into the loader function as it calls it and one the property of object that loader recieves is "params" ok
   const order = await getOrder(params.orderId);
   return order;
 }
